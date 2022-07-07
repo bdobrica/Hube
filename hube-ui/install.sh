@@ -1,6 +1,6 @@
 #!/bin/sh
 
-curl -o wordpress.zip https://wordpress.org/latest.zip
+curl -o wordpress.zip -L https://wordpress.org/latest.zip
 unzip wordpress.zip
 mv wordpress/* /var/www
 rm -Rf wordpress.zip
@@ -10,8 +10,7 @@ rm -Rf /var/www/wp-content/plugins/akismet
 rm -Rf /var/www/wp-content/plugins/hello.php
 rm -Rf /var/www/wp-content/themes/twenty*
 
-
-curl -o flatui.zip https://github.com/designmodo/Flat-UI/archive/master.zip
+curl -o flatui.zip -L https://github.com/designmodo/Flat-UI/archive/master.zip
 unzip flatui.zip
 cp Flat-UI-master/dist/css/flat-ui.min.css /var/www/wp-content/themes/hube-ui/assets/css/flat-ui.min.css
 cp Flat-UI-master/dist/css/vendor/bootstrap.min.css /var/www/wp-content/themes/hube-ui/assets/css/bootstrap.min.css
