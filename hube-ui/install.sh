@@ -25,4 +25,4 @@ sed -i '1 i\/*\nName:flat-ui\nDependencies:jquery\nVersion:0.1\nFooter:true\n*/'
 rm -Rf flatui.zip Flat-UI-master
 
 # create wp-config.php
-sed -i '/^### SALT ###$/r'<( curl -L https://api.wordpress.org/secret-key/1.1/ ) /var/www/wp-config.php
+sed -i '/^### SALT ###$/r'<( curl -L https://api.wordpress.org/secret-key/1.1/salt/ ) /var/www/wp-config.php
