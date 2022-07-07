@@ -40,9 +40,8 @@ RUN mkdir -p /var/www/wp-content/themes && \
     chmod +x /scripts/*.sh
 
 COPY hube-ui /var/www/wp-content/themes/hube-ui
+COPY wp-config.php /var/www/wp-config.php
 
 RUN /scripts/install.sh
-
-COPY wp-config.php /var/www/wp-config.php
 
 ENTRYPOINT ["sh", "/scripts/entrypoint.sh"]
