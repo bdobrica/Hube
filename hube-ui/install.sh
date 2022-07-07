@@ -12,6 +12,8 @@ rm -Rf /var/www/wp-content/themes/twenty*
 
 curl -o flatui.zip -L https://github.com/designmodo/Flat-UI/archive/master.zip
 unzip flatui.zip
+mkdir -p /var/www/wp-content/themes/hube-ui/assets/css/
+mkdir -p /var/www/wp-content/themes/hube-ui/assets/js/
 cp Flat-UI-master/dist/css/flat-ui.min.css /var/www/wp-content/themes/hube-ui/assets/css/flat-ui.min.css
 cp Flat-UI-master/dist/css/vendor/bootstrap.min.css /var/www/wp-content/themes/hube-ui/assets/css/bootstrap.min.css
 cp Flat-UI-master/dist/scripts/flat-ui.min.js /var/www/wp-content/themes/hube-ui/assets/js/flat-ui.min.js
