@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 curl -o wordpress.zip https://wordpress.org/latest.zip
 unzip wordpress.zip
