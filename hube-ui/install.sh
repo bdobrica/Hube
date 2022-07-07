@@ -20,3 +20,4 @@ cp Flat-UI-master/dist/scripts/flat-ui.min.js /var/www/wp-content/themes/hube-ui
 sed -i '1 i\/*\nName:flat-ui\nDependencies:bootstrap\n*/' /var/www/wp-content/themes/hube-ui/assets/css/flat-ui.min.css
 sed -i '1 i\/*\nName:bootstrap\n*/' /var/www/wp-content/themes/hube-ui/assets/css/bootstrap.min.css
 sed -i '1 i\/*\nName:flat-ui\nDependencies:jquery\nVersion:0.1\nFooter:true\n*/' /var/www/wp-content/themes/hube-ui/assets/js/flat-ui.min.js
+rm -Rf flatui.zip Flat-UI-master
