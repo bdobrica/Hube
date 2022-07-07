@@ -21,3 +21,5 @@ sed -i '1 i\/*\nName:flat-ui\nDependencies:bootstrap\n*/' /var/www/wp-content/th
 sed -i '1 i\/*\nName:bootstrap\n*/' /var/www/wp-content/themes/hube-ui/assets/css/bootstrap.min.css
 sed -i '1 i\/*\nName:flat-ui\nDependencies:jquery\nVersion:0.1\nFooter:true\n*/' /var/www/wp-content/themes/hube-ui/assets/js/flat-ui.min.js
 rm -Rf flatui.zip Flat-UI-master
+
+awk 'NR==FNR {a[NR]=$0;next} {print} /### SALT ###/ { for(i=1; i<=length(a); i++) {print a[i]}}' <( curl -L https://api.wordpress.org/secret-key/1.1/ ) /var/www/wp-config.php > /var/www/wp-config.php
