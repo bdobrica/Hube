@@ -24,5 +24,14 @@ sed -i '1 i\/*\nName:bootstrap\n*/' /var/www/wp-content/themes/hube-ui/assets/cs
 sed -i '1 i\/*\nName:flat-ui\nDependencies:jquery\nVersion:0.1\nFooter:true\n*/' /var/www/wp-content/themes/hube-ui/assets/js/flat-ui.min.js
 rm -Rf flatui.zip Flat-UI-master
 
+# copy GoJs files
+curl -o gojs.zip -L https://github.com/NorthwoodsSoftware/GoJS/archive/master.zip
+unzip gojs.zip
+cp GoJS-master/release/go.js /var/www/wp-content/themes/hube-ui/assets/js/go.js
+cp GoJS-master/extensions/Figures.js /var/www/wp-content/themes/hube-ui/assets/js/figures.js
+sed -i '1 i\/*\nName:gojs\nVersion:0.1\nFooter:true\n*/' /var/www/wp-content/themes/hube-ui/assets/js/go.js
+sed -i '1 i\/*\nName:gojs-figures\nDependencies:gojs\nVersion:0.1\nFooter:true\n*/' /var/www/wp-content/themes/hube-ui/assets/js/figures.js
+rm -Rf gojs.zip GoJS-master
+
 # create wp-config.php
 sed -i '/^### SALT ###$/r'<( curl -L https://api.wordpress.org/secret-key/1.1/salt/ ) /var/www/wp-config.php
