@@ -413,9 +413,6 @@ class HUBE_Theme {
                     $content .= '   </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a href="http://www.diagma.ro" target="_blank" class="hube-external"><img src="' . get_stylesheet_directory_uri() . DIRECTORY_SEPARATOR . self::ASSETS . DIRECTORY_SEPARATOR . 'img/licensed.png" /></a>
-            </li>
-            <li>
                 <a class="btn btn-danger pull-right" href="' . self::HOME . '/?page=logout"><i class="fui-power"></i></a>
             </li>
         </ul>
