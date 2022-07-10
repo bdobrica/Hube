@@ -377,13 +377,13 @@ class HUBE_Theme {
                 case 'menu':
                     $stack = $this->get( 'pages' );
 
-                    $content .= '<div class="navbar navbar-default" role="navigation">
+                    $content .= '<div class="navbar navbar-default navbar-expand-lg" role="navigation">
     <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse"><span class="sr-only">Toggle Navigation</span></button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"><span class="sr-only">Toggle Navigation</span></button>
         <a class="navbar-brand" href="' . self::HOME . '"><span>' . self::NAME . '</span></a>
     </div>
     <div id="navbar-collapse" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav mr-auto">
 ';
 
                     while( !empty ($stack) ){
