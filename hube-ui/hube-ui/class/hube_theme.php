@@ -694,6 +694,9 @@ class HUBE_Theme {
     <input type="checkbox"' . ($value ? ' checked' : '') . ' data-toggle="switch" data-on-text="<i class=\'fui-check\'></i>" data-off-text="<i class=\'fui-cross\'></i>" name="' . $key . '" />
 </div>';
                 break;
+            case 'gojs-control':
+                $content = '<textarea name="' . $key . '" class="form-control hube-gojs-control" rows="8"' . stripslashes( $value ) . '</textarea>';
+                break;
             default:
                 if( $type == 'float' || $type == 'percent' )
                     $value = sprintf( '%.2f', (float) $value );
