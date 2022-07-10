@@ -7,7 +7,7 @@
  * Plugin Class. The Hube plugin is an instance of this class.
  *
  * @category
- * @package Hube
+ * @package HUBE
  * @subpackage None
  * @copyright Asociatia Pro-Youth
  * @author Bogdan Dobrica <bdobrica @ gmail.com>

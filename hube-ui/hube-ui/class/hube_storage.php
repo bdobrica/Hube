@@ -7,7 +7,7 @@
  * Storage Class
  *
  * @category
- * @package Hube
+ * @package HUBE
  * @subpackage None
  * @copyright Asociatia Pro-Youth
  * @author Bogdan Dobrica <bdobrica @ gmail.com>

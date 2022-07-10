@@ -5,7 +5,7 @@ $languages = $hube_language->get ('languages');
 if (strpos ($_SERVER['REQUEST_URI'], '/admin/') !== FALSE) : ?>
 <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-12">
-        <a href="" class="hube-logo"><span><?php HUBE_Theme::_e( /*T[*/'HUBE'/*]*/ ); ?></span></a>
+        <a href="" class="hube-logo"><span><?php wp_title (); ?></span></a>
         <div class="hube-rounded hube-translucent hube-padded hube-center hube-trainer-login">
             <h5><?php HUBE_Theme::_e( /*T[*/'Trainer Login'/*]*/ ); ?></h5>
             <form action="" method="post">
@@ -29,7 +29,7 @@ if (strpos ($_SERVER['REQUEST_URI'], '/admin/') !== FALSE) : ?>
 <?php else : ?>
 <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-12">
-        <a href="" class="hube-logo"><span><?php HUBE_Theme::_e( /*T[*/'HUBE'/*]*/ ); ?></span></a>
+        <a href="" class="hube-logo"><span><?php wp_title (); ?></span></a>
         <div class="hube-rounded hube-translucent hube-padded hube-center hube-player-login">
             <h5><?php HUBE_Theme::_e( /*T[*/'Player Login'/*]*/ ); ?></h5>
             <form action="" method="post">

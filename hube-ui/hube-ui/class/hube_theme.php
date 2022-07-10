@@ -59,12 +59,14 @@ class HUBE_Theme {
 
         $this->assets = [];
         $this->storage = new HUBE_Storage();
-        $this->user = new HUBE_User( $this->storage->get ('customer') );
+        $this->user = new HUBE_User();
 
 #        if ($this->storage->get ('locale'))
 #            $this->storage->set ('locale', $locale);
 #        else
 #            $locale = $this->storage->get ('locale');
+
+        $this->page = isset ($_GET[self::GET]) ? $_GET[self::GET] : 'dashboard';
 
         $this->action = isset ($_GET[self::ACTION]) ? (
             in_array ($_GET[self::ACTION], static::$A) ?
