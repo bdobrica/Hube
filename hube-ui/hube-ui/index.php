@@ -1,36 +1,36 @@
 <?php
-$header_file = $hube_theme->get ('dir', 'request::header');
+$header_file = $hube_theme->get( 'dir', 'request::header' );
 
-$hube_user = $hube_theme->get ('user');
-$user_role = $hube_theme->get ('user', 'role');
+$hube_user = $hube_theme->get( 'user' );
+$user_role = $hube_theme->get( 'user', 'role' );
 
-if (file_exists ($header_file))
-        include ($header_file);
+if( file_exists( $header_file ))
+    include( $header_file );
 
-get_header();
+get_header( );
 ?>
-<div class="container <?php echo !empty ($user_role) ? 'hube-' . $user_role : ''; ?>">
+<div class="container <?php echo !empty( $user_role ) ? 'hube-' . $user_role : ''; ?>">
 <?php
 
-if ($user_role == 'admin'):
-        $hube_theme->render ('menu');
+if( $user_role == 'admin' ):
+    $hube_theme->render( 'menu' );
 
 ?>
 
-<?php $hube_theme->render ('header'); ?>
+<?php $hube_theme->render( 'header' ); ?>
                 <hr />
 <?php
-        $page_file = $hube_theme->get ('dir', 'request::pages');
-        if (file_exists ($page_file)) :
-                include ($page_file);
-        endif;
+    $page_file = $hube_theme->get( 'dir', 'request::pages' );
+    if( file_exists( $page_file )) :
+        include( $page_file );
+    endif;
 ?>
         </div>
 </div>
 <?php else:
-        $page_file = $hube_theme->get ('dir', 'request::pages');
-        if (file_exists ($page_file)) :
-                include ($page_file);
-        endif;
+    $page_file = $hube_theme->get( 'dir', 'request::pages' );
+    if( file_exists( $page_file )) :
+        include( $page_file );
+    endif;
 endif;
-get_footer();
+get_footer( );

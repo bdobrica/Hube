@@ -1,0 +1,14 @@
+/*
+Name: hube-ui
+Dependencies: flat-ui
+Version: 0.1
+*/
+.hube-rounded { border-radius: 6px; }
+.hube-translucent { background-color: rgba(255, 255, 255, 0.8); }
+.hube-padded { padding: 5px; }
+.select-block { width: 100%; }
+.hube-padded .row { margin-bottom: .5em; }
+.hube-conversation { min-height: 1000px; }
+.hube-external { padding: 0!important; margin: 0!important; }
+.hube-center { text-align: center; margin: 0 8px; }
+.hube-justify { text-align: justify; margin: 0 8px; }
