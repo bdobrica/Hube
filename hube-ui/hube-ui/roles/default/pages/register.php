@@ -1,6 +1,6 @@
 <?php ?><div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12">
-        <h1><?php wp_title (); ?></h1>
+        <h1><?php wp_title(); ?></h1>
     </div>
 </div>
 <div class="row">
